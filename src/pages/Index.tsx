@@ -18,7 +18,7 @@ const Index = () => {
   const programs = [
     { time: '06:00', title: 'Утреннее шоу', category: 'Развлечения' },
     { time: '09:00', title: 'Новости дня', category: 'Новости' },
-    { time: '10:00', title: 'Кулинарное путешествие', category: 'Образование' },
+    { time: '10:00', title: 'Завтрак с Максимом', category: 'Образование', featured: true },
     { time: '12:00', title: 'Дневные новости', category: 'Новости' },
     { time: '13:00', title: 'Документальный фильм', category: 'Документальное' },
     { time: '15:00', title: 'Спортивный час', category: 'Спорт' },
@@ -29,6 +29,12 @@ const Index = () => {
 
   const news = [
     {
+      title: 'Премьера! "Завтрак с Максимом" — новая кулинарная программа',
+      date: '27 октября 2025',
+      description: 'Каждую субботу в 10:00 утра ведущий Максим Зуев научит вас готовить вкусные завтраки для всей семьи. Премьера 1 ноября!',
+      featured: true,
+    },
+    {
       title: 'Запуск нового сезона "Утреннего шоу"',
       date: '25 октября 2025',
       description: 'Встречайте обновлённый формат вашей любимой утренней программы с новыми ведущими и рубриками.',
@@ -37,11 +43,6 @@ const Index = () => {
       title: 'Эксклюзивное интервью с кинорежиссёром',
       date: '23 октября 2025',
       description: 'Не пропустите эксклюзивное интервью с известным режиссёром в рамках документального цикла.',
-    },
-    {
-      title: 'Новая спортивная программа стартует в ноябре',
-      date: '20 октября 2025',
-      description: 'Следите за анонсами нашей новой спортивной программы, которая выйдет в эфир уже в начале ноября.',
     },
   ];
 
@@ -126,6 +127,50 @@ const Index = () => {
                 <Icon name="Play" size={20} className="mr-2" />
                 Смотреть прямой эфир
               </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <Card className="overflow-hidden border-2 border-primary/20 shadow-2xl">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="relative aspect-video md:aspect-auto">
+                    <img
+                      src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg"
+                      alt="Завтрак с Максимом"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                      ПРЕМЬЕРА
+                    </div>
+                  </div>
+                  <div className="p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-background to-primary/5">
+                    <div className="space-y-4">
+                      <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                        Завтрак с Максимом
+                      </h2>
+                      <div className="flex items-center space-x-2 text-primary font-semibold">
+                        <Icon name="Calendar" size={20} />
+                        <span>Каждую субботу в 10:00</span>
+                      </div>
+                      <p className="text-lg text-foreground/80 leading-relaxed">
+                        Ведущий <strong>Максим Зуев</strong> научит вас готовить вкусные завтраки, 
+                        которые легко повторить всей семьёй. Простые рецепты и полезные советы для идеального утра!
+                      </p>
+                      <div className="bg-primary/10 border-l-4 border-primary p-4 rounded">
+                        <p className="font-bold text-foreground mb-1">Премьера 1 ноября</p>
+                        <p className="text-sm text-muted-foreground">По субботам в 10:00 утра</p>
+                      </div>
+                      <Button size="lg" className="bg-primary hover:bg-primary/90 w-full md:w-auto">
+                        <Icon name="Bell" size={20} className="mr-2" />
+                        Напомнить о премьере
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </section>
@@ -280,8 +325,20 @@ const Index = () => {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {news.map((item, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all hover:-translate-y-1">
+                <Card 
+                  key={index} 
+                  className={`hover:shadow-lg transition-all hover:-translate-y-1 ${
+                    item.featured ? 'border-2 border-primary shadow-xl' : ''
+                  }`}
+                >
                   <CardHeader>
+                    {item.featured && (
+                      <div className="mb-2">
+                        <span className="bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded">
+                          НОВИНКА
+                        </span>
+                      </div>
+                    )}
                     <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-2">
                       <Icon name="Calendar" size={16} />
                       <span>{item.date}</span>
