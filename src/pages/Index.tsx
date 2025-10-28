@@ -417,25 +417,19 @@ const Index = () => {
 
             <div className="max-w-5xl mx-auto mb-16">
               <Card className="overflow-hidden border-2 border-primary/40 shadow-2xl">
-                <div className="aspect-video bg-secondary flex items-center justify-center relative">
-                  <img 
-                    src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/d3b93a43-e25d-4ffa-bd01-e0fec3eb1f89.jpg"
-                    alt="Баку - 1 выпуск"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto hover:bg-primary/90 transition-colors cursor-pointer">
-                        <Icon name="Play" size={40} className="text-primary-foreground ml-2" />
-                      </div>
-                      <p className="text-white text-lg font-bold">Смотреть первый выпуск</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse flex items-center gap-2">
+                <div className="aspect-video bg-black relative">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=1&rel=0"
+                    title="Поехали в Город - Баку (1 выпуск 4 сезона)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                  <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse flex items-center gap-2 pointer-events-none">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                     В ЭФИРЕ СЕЙЧАС
                   </div>
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold pointer-events-none">
                     4 СЕЗОН • Эпизод 1
                   </div>
                 </div>
@@ -452,12 +446,26 @@ const Index = () => {
                     Первый выпуск нового сезона! Отправляемся в столицу Азербайджана — город, где древние традиции встречаются с футуристической архитектурой. 
                     Исследуем Старый город, пробуем национальную кухню и любуемся знаменитыми Огненными башнями.
                   </CardDescription>
-                  <div className="mt-4 p-4 bg-primary/5 rounded-lg border-l-4 border-primary">
-                    <p className="text-sm italic text-foreground/90 leading-relaxed">
-                      <strong>Максим в конце выпуска:</strong> "Друзья, сегодня вы посетили один из самых прекрасных городов Азербайджана — это Баку! 
-                      Это крутой город, и знаете что — приезжайте в него поскорее! Спасибо вам огромное, путешествуйте вместе со мной! 
-                      Я Максим, это «Поехали в Город», и прямо сейчас я отправляюсь в новый город, который вы увидите уже через неделю. Увидимся! Пока-пока!"
-                    </p>
+                  <div className="mt-4 space-y-4">
+                    <div className="p-4 bg-primary/5 rounded-lg border-l-4 border-primary">
+                      <p className="text-sm italic text-foreground/90 leading-relaxed">
+                        <strong>Максим в конце выпуска:</strong> "Друзья, сегодня вы посетили один из самых прекрасных городов Азербайджана — это Баку! 
+                        Это крутой город, и знаете что — приезжайте в него поскорее! Спасибо вам огромное, путешествуйте вместе со мной! 
+                        Я Максим, это «Поехали в Город», и прямо сейчас я отправляюсь в новый город, который вы увидите уже через неделю. Увидимся! Пока-пока!"
+                      </p>
+                    </div>
+                    <div className="flex gap-3">
+                      <Button className="bg-primary hover:bg-primary/90" asChild>
+                        <a href="/poehali">
+                          <Icon name="Film" size={20} className="mr-2" />
+                          Смотреть все выпуски
+                        </a>
+                      </Button>
+                      <Button variant="outline" onClick={() => scrollToSection('contact')}>
+                        <Icon name="Upload" size={20} className="mr-2" />
+                        Участвовать в конкурсе
+                      </Button>
+                    </div>
                   </div>
                 </CardHeader>
               </Card>
