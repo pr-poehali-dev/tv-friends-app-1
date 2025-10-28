@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
+import { contestVideos } from '@/data/contestVideos';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -466,113 +467,56 @@ const Index = () => {
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
-                <Card className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
-                  <div className="aspect-video bg-secondary relative overflow-hidden">
-                    <img 
-                      src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg"
-                      alt="Видео участника 1"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                        <Icon name="Play" size={24} className="text-primary ml-1" />
+                {contestVideos.map((video) => (
+                  <Card key={video.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+                    <div className="aspect-video bg-secondary relative overflow-hidden">
+                      <img 
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                      />
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                        <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                          <Icon name="Play" size={24} className="text-primary ml-1" />
+                        </div>
                       </div>
+                      <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs">
+                        {video.duration}
+                      </div>
+                      {video.isLeader && (
+                        <div className="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 rounded text-xs font-bold">
+                          🔥 ЛИДЕР НЕДЕЛИ
+                        </div>
+                      )}
                     </div>
-                    <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs">2:15</div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-base">Завтрак в кафе у моря</CardTitle>
-                    <CardDescription className="text-sm">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Icon name="User" size={14} />
-                        <span>Анна Петрова, Санкт-Петербург</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-xs">
-                        <span className="flex items-center gap-1">
-                          <Icon name="Heart" size={12} className="text-red-500" />
-                          243
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Icon name="Eye" size={12} />
-                          1.2K
-                        </span>
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-
-                <Card className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
-                  <div className="aspect-video bg-secondary relative overflow-hidden">
-                    <img 
-                      src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/d3b93a43-e25d-4ffa-bd01-e0fec3eb1f89.jpg"
-                      alt="Видео участника 2"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                        <Icon name="Play" size={24} className="text-primary ml-1" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs">3:42</div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-base">Прогулка по парку Горького</CardTitle>
-                    <CardDescription className="text-sm">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Icon name="User" size={14} />
-                        <span>Дмитрий Соколов, Москва</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-xs">
-                        <span className="flex items-center gap-1">
-                          <Icon name="Heart" size={12} className="text-red-500" />
-                          187
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Icon name="Eye" size={12} />
-                          890
-                        </span>
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-
-                <Card className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
-                  <div className="aspect-video bg-secondary relative overflow-hidden">
-                    <img 
-                      src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/2a8f3e9a-faad-4ad3-a12f-c98f876f6ca6.jpg"
-                      alt="Видео участника 3"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                        <Icon name="Play" size={24} className="text-primary ml-1" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs">1:58</div>
-                    <div className="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 rounded text-xs font-bold">
-                      🔥 ЛИДЕР НЕДЕЛИ
-                    </div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-base">Уличная еда в Казани</CardTitle>
-                    <CardDescription className="text-sm">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Icon name="User" size={14} />
-                        <span>Елена Иванова, Казань</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-xs">
-                        <span className="flex items-center gap-1">
-                          <Icon name="Heart" size={12} className="text-red-500" />
-                          521
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Icon name="Eye" size={12} />
-                          2.8K
-                        </span>
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
+                    <CardHeader>
+                      <CardTitle className="text-base">{video.title}</CardTitle>
+                      <CardDescription className="text-sm">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Icon name="User" size={14} />
+                          <div className="flex flex-col">
+                            <span className="font-semibold">
+                              {video.author.lastName} {video.author.firstName} {video.author.patronymic}
+                            </span>
+                            <span className="text-xs text-muted-foreground">
+                              {video.author.age} лет, {video.author.city}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 text-xs">
+                          <span className="flex items-center gap-1">
+                            <Icon name="Heart" size={12} className="text-red-500" />
+                            {video.likes}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Icon name="Eye" size={12} />
+                            {video.views >= 1000 ? `${(video.views / 1000).toFixed(1)}K` : video.views}
+                          </span>
+                        </div>
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                ))}
               </div>
 
               <div className="text-center mt-8">
