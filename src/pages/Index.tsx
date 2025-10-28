@@ -72,6 +72,13 @@ const Index = () => {
               >
                 Программа передач
               </button>
+              <a
+                href="/poehali"
+                className="text-sm font-medium text-primary-foreground/80 hover:text-primary transition-colors flex items-center gap-1"
+              >
+                Поехали в Город
+                <Icon name="ExternalLink" size={14} />
+              </a>
               <button
                 onClick={() => scrollToSection('live')}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
