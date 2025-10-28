@@ -27,7 +27,7 @@ export default function Poehali() {
   const episodes: Episode[] = [
     {
       id: 1,
-      season: 1,
+      season: 4,
       episode: 1,
       title: 'Город ветров и огня',
       city: 'Баку',
@@ -41,7 +41,7 @@ export default function Poehali() {
     },
     {
       id: 2,
-      season: 1,
+      season: 4,
       episode: 2,
       title: 'Нефтяная столица Сибири',
       city: 'Тюмень',
@@ -54,7 +54,7 @@ export default function Poehali() {
     },
     {
       id: 3,
-      season: 1,
+      season: 4,
       episode: 3,
       title: 'Город будущего в пустыне',
       city: 'Дубай',
@@ -68,7 +68,7 @@ export default function Poehali() {
     },
     {
       id: 4,
-      season: 1,
+      season: 4,
       episode: 4,
       title: 'Столица развлечений',
       city: 'Лас-Вегас',
@@ -82,7 +82,7 @@ export default function Poehali() {
     },
     {
       id: 5,
-      season: 1,
+      season: 4,
       episode: 5,
       title: 'Сказка Аравийского полуострова',
       city: 'Маскат',
@@ -96,7 +96,7 @@ export default function Poehali() {
     },
     {
       id: 6,
-      season: 1,
+      season: 4,
       episode: 6,
       title: 'Южная столица России',
       city: 'Краснодар',
@@ -109,7 +109,7 @@ export default function Poehali() {
     },
     {
       id: 7,
-      season: 1,
+      season: 4,
       episode: 7,
       title: 'Священное озеро Сибири',
       city: 'Байкал',
@@ -122,7 +122,7 @@ export default function Poehali() {
     },
     {
       id: 8,
-      season: 1,
+      season: 4,
       episode: 8,
       title: 'Город на Тереке',
       city: 'Владикавказ',
@@ -135,16 +135,29 @@ export default function Poehali() {
     },
     {
       id: 9,
-      season: 1,
+      season: 4,
       episode: 9,
       title: 'Уральская столица',
       city: 'Екатеринбург',
       country: 'Россия',
       date: '29 декабря 2024',
       duration: '30 мин',
-      description: 'Финал сезона! Граница Европы и Азии. Храм на Крови, Плотинка и уральские самоцветы. Стрит-арт, современная архитектура и история династии Романовых.',
+      description: 'Граница Европы и Азии. Храм на Крови, Плотинка и уральские самоцветы. Стрит-арт, современная архитектура и история династии Романовых.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       rating: 4.9,
+    },
+    {
+      id: 10,
+      season: 4,
+      episode: 11,
+      title: 'Секреты 4 сезона',
+      city: 'Спецвыпуск',
+      country: 'За кадром',
+      date: '4 января 2025',
+      duration: '45 мин',
+      description: 'СПЕЦИАЛЬНЫЙ ВЫПУСК! Узнайте, что происходило за кадром 4 сезона программы "Поехали в Город!". Неудачные дубли, забавные моменты и закулисье съёмок. Эксклюзивные интервью и истории, которые не вошли в эфир.',
+      thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
+      rating: 5.0,
     },
   ];
 
@@ -180,10 +193,10 @@ export default function Poehali() {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               Первое российское тревел-шоу, которое стало международным! 
-              От России до Ближнего Востока и Америки — путешествие по самым удивительным городам планеты.
+              4 сезон: от России до Ближнего Востока и Америки — путешествие по самым удивительным городам планеты.
             </p>
-            <div className="mb-6">
-              <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg inline-block">
+            <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg">
                 <div className="flex items-center gap-3 text-foreground">
                   <Icon name="Tv" size={24} className="text-primary" />
                   <div>
@@ -192,10 +205,20 @@ export default function Poehali() {
                   </div>
                 </div>
               </div>
+              <div className="bg-gradient-to-r from-red-500 to-orange-500 border-l-4 border-red-600 p-6 rounded-lg animate-pulse">
+                <div className="flex items-center gap-3 text-white">
+                  <Icon name="Star" size={24} />
+                  <div>
+                    <div className="font-bold text-lg">СПЕЦВЫПУСК!</div>
+                    <div className="text-sm">Суббота, 4 января в 14:15</div>
+                    <div className="text-xs font-semibold">Секреты 4 сезона</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div className="bg-primary/10 rounded-lg p-4">
-                <div className="text-3xl font-bold text-primary mb-1">9</div>
+                <div className="text-3xl font-bold text-primary mb-1">10</div>
                 <div className="text-sm text-muted-foreground">Выпусков</div>
               </div>
               <div className="bg-primary/10 rounded-lg p-4">
@@ -237,7 +260,7 @@ export default function Poehali() {
                 Все выпуски программы
               </h2>
               <p className="text-muted-foreground text-center mb-8">
-                От Баку до Екатеринбурга — 9 выпусков о самых удивительных городах мира
+                От Баку до Екатеринбурга — 9 городов + специальный выпуск о секретах сезона
               </p>
             </div>
 
@@ -245,7 +268,9 @@ export default function Poehali() {
               {episodes.map((episode) => (
                 <Card
                   key={episode.id}
-                  className="hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group"
+                  className={`hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group ${
+                    episode.episode === 11 ? 'border-2 border-orange-500 shadow-xl' : ''
+                  }`}
                   onClick={() => setSelectedEpisode(episode)}
                 >
                   <div className="relative aspect-video overflow-hidden">
@@ -254,12 +279,21 @@ export default function Poehali() {
                       alt={episode.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                     />
-                    <div className="absolute top-3 left-3">
-                      <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold">
-                        <Icon name="Globe" size={12} className="mr-1" />
-                        {episode.country}
-                      </Badge>
-                    </div>
+                    {episode.episode === 11 ? (
+                      <div className="absolute top-3 left-3">
+                        <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold animate-pulse">
+                          <Icon name="Star" size={12} className="mr-1" />
+                          СПЕЦВЫПУСК
+                        </Badge>
+                      </div>
+                    ) : (
+                      <div className="absolute top-3 left-3">
+                        <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold">
+                          <Icon name="Globe" size={12} className="mr-1" />
+                          {episode.country}
+                        </Badge>
+                      </div>
+                    )}
                     <div className="absolute bottom-3 right-3 bg-black/80 text-white px-2 py-1 rounded text-sm font-semibold">
                       {episode.duration}
                     </div>
