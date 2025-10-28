@@ -191,10 +191,17 @@ export default function Poehali() {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Поехали в Город!
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4">
               Первое российское тревел-шоу, которое стало международным! 
               4 сезон: от России до Ближнего Востока и Америки — путешествие по самым удивительным городам планеты.
             </p>
+            <div className="flex items-center justify-center gap-3 mb-8 bg-primary/5 p-4 rounded-lg max-w-md mx-auto">
+              <Icon name="User" size={24} className="text-primary" />
+              <div className="text-left">
+                <p className="text-sm text-muted-foreground">Ведущий программы</p>
+                <p className="font-bold text-foreground text-lg">Максим</p>
+              </div>
+            </div>
             <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg">
                 <div className="flex items-center gap-3 text-foreground">
