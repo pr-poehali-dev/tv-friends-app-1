@@ -411,28 +411,180 @@ const Index = () => {
                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Прямой эфир</h2>
               </div>
-              <p className="text-muted-foreground">Смотрите нас онлайн прямо сейчас</p>
+              <p className="text-muted-foreground">Смотрите 1 выпуск 4 сезона "Поехали в Город!"</p>
             </div>
 
-            <div className="max-w-5xl mx-auto">
-              <Card className="overflow-hidden">
-                <div className="aspect-video bg-secondary flex items-center justify-center">
-                  <div className="text-center">
-                    <Icon name="Tv" size={64} className="text-primary mx-auto mb-4" />
-                    <p className="text-primary-foreground/80 mb-4">Видеоплеер</p>
-                    <Button className="bg-primary hover:bg-primary/90">
-                      <Icon name="Play" size={20} className="mr-2" />
-                      Запустить трансляцию
-                    </Button>
+            <div className="max-w-5xl mx-auto mb-16">
+              <Card className="overflow-hidden border-2 border-primary/40 shadow-2xl">
+                <div className="aspect-video bg-secondary flex items-center justify-center relative">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/d3b93a43-e25d-4ffa-bd01-e0fec3eb1f89.jpg"
+                    alt="Баку - 1 выпуск"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto hover:bg-primary/90 transition-colors cursor-pointer">
+                        <Icon name="Play" size={40} className="text-primary-foreground ml-2" />
+                      </div>
+                      <p className="text-white text-lg font-bold">Смотреть первый выпуск</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse flex items-center gap-2">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    В ЭФИРЕ СЕЙЧАС
+                  </div>
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    4 СЕЗОН • Эпизод 1
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle>Сейчас в эфире: Утреннее шоу</CardTitle>
-                  <CardDescription>
-                    Присоединяйтесь к нашей прямой трансляции и будьте в курсе последних событий
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Icon name="MapPin" size={20} className="text-primary" />
+                      <span className="text-sm font-semibold text-muted-foreground">Баку, Азербайджан</span>
+                    </div>
+                    <span className="text-sm text-muted-foreground">42 мин</span>
+                  </div>
+                  <CardTitle className="text-2xl md:text-3xl">Огни Баку: между Востоком и Западом</CardTitle>
+                  <CardDescription className="text-base">
+                    Первый выпуск нового сезона! Отправляемся в столицу Азербайджана — город, где древние традиции встречаются с футуристической архитектурой. 
+                    Исследуем Старый город, пробуем национальную кухню и любуемся знаменитыми Огненными башнями.
                   </CardDescription>
                 </CardHeader>
               </Card>
+            </div>
+
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8">
+                <div className="inline-block bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  <Icon name="Trophy" size={16} className="inline mr-2" />
+                  ВИДЕО УЧАСТНИКОВ КОНКУРСА
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Видео этой недели</h3>
+                <p className="text-muted-foreground">Смотрите работы участников конкурса "Поехали в Город!"</p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+                  <div className="aspect-video bg-secondary relative overflow-hidden">
+                    <img 
+                      src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg"
+                      alt="Видео участника 1"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                        <Icon name="Play" size={24} className="text-primary ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs">2:15</div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-base">Завтрак в кафе у моря</CardTitle>
+                    <CardDescription className="text-sm">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Icon name="User" size={14} />
+                        <span>Анна Петрова, Санкт-Петербург</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs">
+                        <span className="flex items-center gap-1">
+                          <Icon name="Heart" size={12} className="text-red-500" />
+                          243
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Icon name="Eye" size={12} />
+                          1.2K
+                        </span>
+                      </div>
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+
+                <Card className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+                  <div className="aspect-video bg-secondary relative overflow-hidden">
+                    <img 
+                      src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/d3b93a43-e25d-4ffa-bd01-e0fec3eb1f89.jpg"
+                      alt="Видео участника 2"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                        <Icon name="Play" size={24} className="text-primary ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs">3:42</div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-base">Прогулка по парку Горького</CardTitle>
+                    <CardDescription className="text-sm">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Icon name="User" size={14} />
+                        <span>Дмитрий Соколов, Москва</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs">
+                        <span className="flex items-center gap-1">
+                          <Icon name="Heart" size={12} className="text-red-500" />
+                          187
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Icon name="Eye" size={12} />
+                          890
+                        </span>
+                      </div>
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+
+                <Card className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+                  <div className="aspect-video bg-secondary relative overflow-hidden">
+                    <img 
+                      src="https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/2a8f3e9a-faad-4ad3-a12f-c98f876f6ca6.jpg"
+                      alt="Видео участника 3"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
+                        <Icon name="Play" size={24} className="text-primary ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs">1:58</div>
+                    <div className="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 rounded text-xs font-bold">
+                      🔥 ЛИДЕР НЕДЕЛИ
+                    </div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-base">Уличная еда в Казани</CardTitle>
+                    <CardDescription className="text-sm">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Icon name="User" size={14} />
+                        <span>Елена Иванова, Казань</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs">
+                        <span className="flex items-center gap-1">
+                          <Icon name="Heart" size={12} className="text-red-500" />
+                          521
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Icon name="Eye" size={12} />
+                          2.8K
+                        </span>
+                      </div>
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </div>
+
+              <div className="text-center mt-8">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  <Icon name="Upload" size={20} className="mr-2" />
+                  Загрузить своё видео
+                </Button>
+              </div>
             </div>
           </div>
         </section>
