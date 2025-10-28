@@ -163,10 +163,18 @@ const Index = () => {
                         <p className="font-bold text-foreground mb-1">Премьера 1 ноября</p>
                         <p className="text-sm text-muted-foreground">По субботам в 10:00 утра</p>
                       </div>
-                      <Button size="lg" className="bg-primary hover:bg-primary/90 w-full md:w-auto">
-                        <Icon name="Bell" size={20} className="mr-2" />
-                        Напомнить о премьере
-                      </Button>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+                          <a href="/breakfast">
+                            <Icon name="Info" size={20} className="mr-2" />
+                            Подробнее о программе
+                          </a>
+                        </Button>
+                        <Button size="lg" variant="outline">
+                          <Icon name="Bell" size={20} className="mr-2" />
+                          Напомнить
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
