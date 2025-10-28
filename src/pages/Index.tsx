@@ -30,20 +30,20 @@ const Index = () => {
 
   const news = [
     {
-      title: 'СПЕЦВЫПУСК "Секреты 4 сезона" — узнайте, что было за кадром!',
+      title: 'КОНКУРС "Поехали в Город!" — Снимай видео и выигрывай призы!',
       date: '28 октября 2025',
-      description: '4 января в 14:15 — специальный выпуск "Поехали в Город!". Закулисье съёмок, неудачные дубли и истории, которые не вошли в эфир.',
+      description: 'Участвуй в конкурсе к премьере 4 сезона! Снимай видео, как развлекаешься или кушаешь, загружай на сайт или ВКонтакте. За лучшие ролики и лайки — призы от телеканала!',
       featured: true,
     },
     {
-      title: 'Старт 4 сезона "Поехали в Город!" — 9 городов, 5 стран',
+      title: 'СПЕЦВЫПУСК "Секреты 4 сезона" — узнайте, что было за кадром!',
       date: '27 октября 2025',
-      description: 'Каждое воскресенье в 10:00 смотрите новый выпуск международного тревел-шоу. От Баку до Екатеринбурга — путешествуйте вместе с нами!',
+      description: '4 января в 14:15 — специальный выпуск "Поехали в Город!". Закулисье съёмок, неудачные дубли и истории, которые не вошли в эфир.',
     },
     {
-      title: 'Премьера! "Завтрак с Максимом" — новая кулинарная программа',
+      title: 'Старт 4 сезона "Поехали в Город!" — 9 городов, 5 стран',
       date: '26 октября 2025',
-      description: 'Каждую субботу в 10:00 утра ведущий Максим Зуев научит вас готовить вкусные завтраки для всей семьи. Премьера 1 ноября!',
+      description: 'Каждое воскресенье в 10:00 смотрите новый выпуск международного тревел-шоу. От Баку до Екатеринбурга — путешествуйте вместе с нами!',
     },
   ];
 
@@ -139,8 +139,88 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 via-primary/5 to-background">
+        <section className="py-16 md:py-24 bg-gradient-to-r from-orange-500/10 via-yellow-500/5 to-background">
           <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto mb-12">
+              <Card className="overflow-hidden border-2 border-orange-500/40 shadow-2xl bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/20 dark:to-yellow-950/20">
+                <div className="p-8 md:p-12">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse flex items-center gap-2">
+                      <Icon name="Trophy" size={18} />
+                      КОНКУРС
+                    </div>
+                    <div className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                      НОВИНКА!
+                    </div>
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+                    Конкурс "Поехали в Город!"
+                  </h2>
+                  
+                  <p className="text-xl text-foreground/90 mb-6 leading-relaxed">
+                    Снимай видео, как ты развлекаешься или кушаешь в любом месте, 
+                    загружай на сайт или в наше сообщество ВКонтакте — и выиграй призы от телеканала!
+                  </p>
+                  
+                  <div className="grid md:grid-cols-3 gap-4 mb-8">
+                    <div className="bg-white/50 dark:bg-black/20 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Icon name="Video" size={24} className="text-orange-500" />
+                        <h3 className="font-bold text-foreground">1. Снимай видео</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Покажи, как ты отдыхаешь, путешествуешь или наслаждаешься едой
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white/50 dark:bg-black/20 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Icon name="Upload" size={24} className="text-orange-500" />
+                        <h3 className="font-bold text-foreground">2. Загружай</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        На сайт телеканала или в сообщество ВКонтакте
+                      </p>
+                    </div>
+                    
+                    <div className="bg-white/50 dark:bg-black/20 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Icon name="Gift" size={24} className="text-orange-500" />
+                        <h3 className="font-bold text-foreground">3. Получай призы!</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Самые крутые видео получат призы от канала
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-4 rounded-lg mb-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon name="Zap" size={20} />
+                      <p className="font-bold">Бонус: за лайки тоже можно получить призы!</p>
+                    </div>
+                    <p className="text-sm opacity-90">
+                      Приглашай друзей лайкать твоё видео и увеличивай шансы на победу
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white" onClick={() => scrollToSection('contact')}>
+                      <Icon name="Trophy" size={20} className="mr-2" />
+                      Участвовать в конкурсе
+                    </Button>
+                    <Button size="lg" variant="outline" className="border-orange-500 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950/20" asChild>
+                      <a href="https://vk.com/novyedruzya_tv" target="_blank" rel="noopener noreferrer">
+                        <Icon name="ExternalLink" size={20} className="mr-2" />
+                        Сообщество ВКонтакте
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            
             <div className="max-w-6xl mx-auto">
               <Card className="overflow-hidden border-2 border-primary/20 shadow-2xl">
                 <div className="grid md:grid-cols-2 gap-0">
