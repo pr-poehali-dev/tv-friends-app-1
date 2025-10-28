@@ -195,14 +195,39 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-4 rounded-lg mb-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="Zap" size={20} />
-                      <p className="font-bold">Бонус: за лайки тоже можно получить призы!</p>
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-4 rounded-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Icon name="Zap" size={20} />
+                        <p className="font-bold">За лайки — призы!</p>
+                      </div>
+                      <p className="text-sm opacity-90">
+                        Собирай лайки и увеличивай шансы на победу
+                      </p>
                     </div>
-                    <p className="text-sm opacity-90">
-                      Приглашай друзей лайкать твоё видео и увеличивай шансы на победу
-                    </p>
+                    
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Icon name="Tv" size={20} />
+                        <p className="font-bold">Попади на ТВ!</p>
+                      </div>
+                      <p className="text-sm opacity-90">
+                        Лучшие видео покажут в эфире телеканала
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-red-500/10 border-l-4 border-red-500 p-4 rounded mb-6">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Calendar" size={20} className="text-red-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-bold text-foreground mb-1">Важные даты</p>
+                        <p className="text-sm text-foreground/80">
+                          <strong>Победители каждую неделю</strong> — следи за эфиром!<br />
+                          <strong>Финал 15 ноября</strong> — объявление всех победителей сезона
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -490,42 +515,171 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="contact" className="py-16 md:py-24">
+        <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-background to-orange-500/5">
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Контакты</h2>
-                <p className="text-muted-foreground">Свяжитесь с нами для любых вопросов</p>
+                <div className="inline-block bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  <Icon name="Trophy" size={16} className="inline mr-2" />
+                  УЧАСТВУЙ В КОНКУРСЕ
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Загрузи своё видео и выиграй приз!
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  Заполни форму участия — победители объявляются каждую неделю
+                </p>
               </div>
 
-              <Card>
+              <Card className="border-2 border-orange-500/40 shadow-xl mb-8">
                 <CardContent className="pt-6">
-                  <form className="space-y-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
-                        Имя
-                      </label>
-                      <Input id="name" placeholder="Ваше имя" />
+                  <div className="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 p-6 rounded-lg mb-6 border border-orange-200 dark:border-orange-800">
+                    <div className="flex items-start gap-3 mb-4">
+                      <Icon name="AlertCircle" size={24} className="text-orange-500 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="font-bold text-foreground mb-2 text-lg">Важная информация для участников</h3>
+                        <ul className="space-y-2 text-sm text-foreground/80">
+                          <li className="flex items-start gap-2">
+                            <span className="text-orange-500 font-bold">•</span>
+                            <span><strong>Обязательно укажите ФИО и адрес</strong> — чтобы мы могли связаться с вами при победе</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-orange-500 font-bold">•</span>
+                            <span><strong>Победители каждую неделю</strong> — результаты объявляются в эфире</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-orange-500 font-bold">•</span>
+                            <span><strong>Финальные итоги 15 ноября</strong> — узнаем всех победителей сезона!</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-orange-500 font-bold">•</span>
+                            <span><strong>Лучшие видео покажут по ТВ</strong> — шанс попасть на телевизор!</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
+                  </div>
+
+                  <form className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="lastName" className="block text-sm font-medium mb-2">
+                          Фамилия <span className="text-red-500">*</span>
+                        </label>
+                        <Input id="lastName" placeholder="Иванов" required />
+                      </div>
+                      <div>
+                        <label htmlFor="firstName" className="block text-sm font-medium mb-2">
+                          Имя <span className="text-red-500">*</span>
+                        </label>
+                        <Input id="firstName" placeholder="Иван" required />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="patronymic" className="block text-sm font-medium mb-2">
+                        Отчество <span className="text-red-500">*</span>
+                      </label>
+                      <Input id="patronymic" placeholder="Иванович" required />
+                    </div>
+
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        Email
+                        Email <span className="text-red-500">*</span>
                       </label>
-                      <Input id="email" type="email" placeholder="your@email.com" />
+                      <Input id="email" type="email" placeholder="ivan@example.com" required />
                     </div>
+
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Сообщение
+                      <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                        Телефон <span className="text-red-500">*</span>
                       </label>
-                      <Textarea id="message" placeholder="Ваше сообщение..." rows={5} />
+                      <Input id="phone" type="tel" placeholder="+7 (999) 123-45-67" required />
                     </div>
-                    <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
-                      <Icon name="Send" size={20} className="mr-2" />
-                      Отправить сообщение
+
+                    <div>
+                      <label htmlFor="address" className="block text-sm font-medium mb-2">
+                        Адрес (улица, дом, квартира) <span className="text-red-500">*</span>
+                      </label>
+                      <Input id="address" placeholder="ул. Ленина, д. 10, кв. 5" required />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="city" className="block text-sm font-medium mb-2">
+                          Город <span className="text-red-500">*</span>
+                        </label>
+                        <Input id="city" placeholder="Москва" required />
+                      </div>
+                      <div>
+                        <label htmlFor="postalCode" className="block text-sm font-medium mb-2">
+                          Почтовый индекс <span className="text-red-500">*</span>
+                        </label>
+                        <Input id="postalCode" placeholder="123456" required />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="videoUrl" className="block text-sm font-medium mb-2">
+                        Ссылка на видео <span className="text-red-500">*</span>
+                      </label>
+                      <Input 
+                        id="videoUrl" 
+                        type="url" 
+                        placeholder="Ссылка на ВКонтакте, YouTube или другой видеохостинг" 
+                        required 
+                      />
+                      <p className="text-xs text-muted-foreground mt-2">
+                        Загрузите видео в наше сообщество ВКонтакте или на YouTube и вставьте ссылку
+                      </p>
+                    </div>
+
+                    <div>
+                      <label htmlFor="description" className="block text-sm font-medium mb-2">
+                        Описание видео
+                      </label>
+                      <Textarea 
+                        id="description" 
+                        placeholder="Расскажите, что вы сняли: где были, что делали, что кушали..." 
+                        rows={4} 
+                      />
+                    </div>
+
+                    <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white" size="lg">
+                      <Icon name="Upload" size={20} className="mr-2" />
+                      Отправить заявку на участие
                     </Button>
                   </form>
 
-                  <div className="mt-8 pt-8 border-t space-y-4">
+                  <div className="mt-8 pt-8 border-t">
+                    <div className="text-center mb-4">
+                      <h3 className="font-bold text-foreground mb-2">Загружай видео в наше сообщество!</h3>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        Присоединяйся к сообществу ВКонтакте — смотри видео других участников, получай лайки и увеличивай шансы на победу
+                      </p>
+                    </div>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-2 border-blue-500 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20" 
+                      size="lg"
+                      asChild
+                    >
+                      <a href="https://vk.com/novyedruzya_tv" target="_blank" rel="noopener noreferrer">
+                        <Icon name="ExternalLink" size={20} className="mr-2" />
+                        Открыть сообщество ВКонтакте
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Есть вопросы? Свяжитесь с нами</CardTitle>
+                  <CardDescription>Мы ответим на все ваши вопросы о конкурсе</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <Icon name="Mail" size={20} className="text-primary" />
                       <span>info@noviedruzyatv.ru</span>
