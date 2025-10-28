@@ -32,8 +32,8 @@ export default function Poehali() {
       title: 'Город ветров и огня',
       city: 'Баку',
       country: 'Азербайджан',
-      date: '15 января 2024',
-      duration: '52 мин',
+      date: '3 ноября 2024',
+      duration: '30 мин',
       description: 'Первый выпуск! Современные башни Flame Towers и древний Ичери-Шехер. Каспийская набережная, азербайджанский плов и нефтяные фонтаны. Огненная земля гостеприимства.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       isInternational: true,
@@ -46,8 +46,8 @@ export default function Poehali() {
       title: 'Нефтяная столица Сибири',
       city: 'Тюмень',
       country: 'Россия',
-      date: '22 января 2024',
-      duration: '48 мин',
+      date: '10 ноября 2024',
+      duration: '30 мин',
       description: 'Первый русский город за Уралом. Набережная Туры, Цветной бульвар и горячие источники. Сибирская кухня, история освоения и современное развитие.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       rating: 4.7,
@@ -59,8 +59,8 @@ export default function Poehali() {
       title: 'Город будущего в пустыне',
       city: 'Дубай',
       country: 'ОАЭ',
-      date: '29 января 2024',
-      duration: '65 мин',
+      date: '17 ноября 2024',
+      duration: '30 мин',
       description: 'Бурдж-Халифа, искусственные острова и роскошные моллы. Пустынное сафари, золотой рынок и небоскребы будущего. Восточная роскошь и технологии.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       isInternational: true,
@@ -73,8 +73,8 @@ export default function Poehali() {
       title: 'Столица развлечений',
       city: 'Лас-Вегас',
       country: 'США',
-      date: '5 февраля 2024',
-      duration: '58 мин',
+      date: '24 ноября 2024',
+      duration: '30 мин',
       description: 'Город огней в пустыне Невада. Казино, шоу мирового уровня и знаменитый Стрип. Гранд-Каньон поблизости и американская мечта в неоновых огнях.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       isInternational: true,
@@ -87,8 +87,8 @@ export default function Poehali() {
       title: 'Сказка Аравийского полуострова',
       city: 'Маскат',
       country: 'Оман',
-      date: '12 февраля 2024',
-      duration: '54 мин',
+      date: '1 декабря 2024',
+      duration: '30 мин',
       description: 'Султанат Оман — восточная экзотика без суеты. Мечеть султана Кабуса, старинные форты и рынки с благовониями. Пустыня, горы и Аравийское море.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       isInternational: true,
@@ -101,8 +101,8 @@ export default function Poehali() {
       title: 'Южная столица России',
       city: 'Краснодар',
       country: 'Россия',
-      date: '19 февраля 2024',
-      duration: '50 мин',
+      date: '8 декабря 2024',
+      duration: '30 мин',
       description: 'Город, где всегда тепло. Улица Красная, парки Галицкого и современные проекты. Кубанская кухня, казачья культура и южное гостеприимство.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       rating: 4.7,
@@ -114,8 +114,8 @@ export default function Poehali() {
       title: 'Священное озеро Сибири',
       city: 'Байкал',
       country: 'Россия',
-      date: '26 февраля 2024',
-      duration: '60 мин',
+      date: '15 декабря 2024',
+      duration: '30 мин',
       description: 'Самое глубокое озеро планеты. Остров Ольхон, шаманские места силы и чистейшая вода. Байкальская рыба, буряты и природа мирового значения.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       rating: 5.0,
@@ -127,8 +127,8 @@ export default function Poehali() {
       title: 'Город на Тереке',
       city: 'Владикавказ',
       country: 'Россия',
-      date: '4 марта 2024',
-      duration: '52 мин',
+      date: '22 декабря 2024',
+      duration: '30 мин',
       description: 'Столица Северной Осетии у подножия Кавказских гор. Осетинские пироги, горские традиции и военно-грузинская дорога. Кавказское гостеприимство.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       rating: 4.8,
@@ -140,25 +140,11 @@ export default function Poehali() {
       title: 'Уральская столица',
       city: 'Екатеринбург',
       country: 'Россия',
-      date: '11 марта 2024',
-      duration: '56 мин',
-      description: 'Граница Европы и Азии. Храм на Крови, Плотинка и уральские самоцветы. Стрит-арт, современная архитектура и история династии Романовых.',
+      date: '29 декабря 2024',
+      duration: '30 мин',
+      description: 'Финал сезона! Граница Европы и Азии. Храм на Крови, Плотинка и уральские самоцветы. Стрит-арт, современная архитектура и история династии Романовых.',
       thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
       rating: 4.9,
-    },
-    {
-      id: 10,
-      season: 1,
-      episode: 10,
-      title: 'Возвращение в Дубай',
-      city: 'Дубай',
-      country: 'ОАЭ',
-      date: '18 марта 2024',
-      duration: '62 мин',
-      description: 'Финал сезона! Возвращаемся в город будущего. Подводим итоги путешествия, делимся впечатлениями и показываем то, что не вошло в первый выпуск. Expo City и новые проекты.',
-      thumbnail: 'https://cdn.poehali.dev/projects/3478e400-ff84-4126-9411-8f9e5adbc820/files/882ccc88-2d7b-43fc-a77a-df961c88135e.jpg',
-      isInternational: true,
-      rating: 5.0,
     },
   ];
 
@@ -196,9 +182,20 @@ export default function Poehali() {
               Первое российское тревел-шоу, которое стало международным! 
               От России до Ближнего Востока и Америки — путешествие по самым удивительным городам планеты.
             </p>
+            <div className="mb-6">
+              <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-lg inline-block">
+                <div className="flex items-center gap-3 text-foreground">
+                  <Icon name="Tv" size={24} className="text-primary" />
+                  <div>
+                    <div className="font-bold text-lg">Каждое воскресенье в 10:00</div>
+                    <div className="text-sm text-muted-foreground">Длительность: 30 минут</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div className="bg-primary/10 rounded-lg p-4">
-                <div className="text-3xl font-bold text-primary mb-1">10</div>
+                <div className="text-3xl font-bold text-primary mb-1">9</div>
                 <div className="text-sm text-muted-foreground">Выпусков</div>
               </div>
               <div className="bg-primary/10 rounded-lg p-4">
@@ -240,7 +237,7 @@ export default function Poehali() {
                 Все выпуски программы
               </h2>
               <p className="text-muted-foreground text-center mb-8">
-                От Баку до Лас-Вегаса — 10 выпусков о самых удивительных городах мира
+                От Баку до Екатеринбурга — 9 выпусков о самых удивительных городах мира
               </p>
             </div>
 
