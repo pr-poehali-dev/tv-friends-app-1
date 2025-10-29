@@ -7,10 +7,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
 import { contestVideos } from '@/data/contestVideos';
 import ShowIntro from '@/components/ShowIntro';
+import ShowIntroNewYear from '@/components/ShowIntroNewYear';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showIntro, setShowIntro] = useState(false);
+  const [showIntroNewYear, setShowIntroNewYear] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -53,6 +55,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {showIntro && <ShowIntro onComplete={() => setShowIntro(false)} />}
+      {showIntroNewYear && <ShowIntroNewYear onComplete={() => setShowIntroNewYear(false)} />}
       
       <header className="sticky top-0 z-50 bg-secondary border-b border-border/40 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -510,6 +513,30 @@ const Index = () => {
                       <Icon name="Play" size={24} className="mr-2" />
                       Смотреть выпуск #3
                     </Button>
+                  </div>
+                  
+                  <div className="mt-8 px-4 text-center">
+                    <div className="bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-xl p-6 border-2 border-blue-300">
+                      <div className="text-4xl mb-3">🎄❄️🎅</div>
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Новогодний выпуск!</h3>
+                      <p className="text-muted-foreground mb-4">30 декабря 2025 • 10:00 утра</p>
+                      <div className="flex gap-3 justify-center flex-wrap">
+                        <Button 
+                          size="lg" 
+                          className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold shadow-lg"
+                          onClick={() => setShowIntroNewYear(true)}
+                        >
+                          ❄️ Новогодняя заставка
+                        </Button>
+                        <Button 
+                          size="lg" 
+                          className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold shadow-lg"
+                          onClick={() => window.location.href = '/show-episode-newyear'}
+                        >
+                          🎄 Смотреть новогодний выпуск
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                 </CardHeader>
                 <div className="px-6 pb-6">
