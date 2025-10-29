@@ -471,6 +471,56 @@ const Index = () => {
               </Card>
             </div>
 
+            <div className="max-w-5xl mx-auto mb-16">
+              <Card className="overflow-hidden border-2 border-orange-500/40 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/20 dark:to-yellow-950/20">
+                <CardHeader className="text-center pb-8">
+                  <div className="inline-block mx-auto bg-gradient-to-r from-orange-600 to-yellow-500 text-white px-6 py-3 rounded-full text-lg font-bold mb-6 shadow-lg">
+                    <Icon name="Tv" size={24} className="inline mr-2" />
+                    НОВАЯ ПЕРЕДАЧА!
+                  </div>
+                  <CardTitle className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">
+                    ЭТО НАДО ВИДЕТЬ!
+                  </CardTitle>
+                  <CardDescription className="text-lg text-foreground/80">
+                    Самые крутые видеоролики в новом хит-параде
+                  </CardDescription>
+                </CardHeader>
+                <div className="px-6 pb-6">
+                  <div className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg border-2 border-orange-200 dark:border-orange-800">
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-orange-500 text-white p-2 rounded-lg">
+                          <Icon name="Calendar" size={24} />
+                        </div>
+                        <div>
+                          <p className="font-bold text-foreground mb-1">Расписание выхода</p>
+                          <p className="text-muted-foreground">Понедельник - Четверг</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="bg-yellow-500 text-white p-2 rounded-lg">
+                          <Icon name="Clock" size={24} />
+                        </div>
+                        <div>
+                          <p className="font-bold text-foreground mb-1">Время показа</p>
+                          <p className="text-muted-foreground">10:00 утра</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-orange-100 to-yellow-100 dark:from-orange-900/30 dark:to-yellow-900/30 rounded-lg">
+                      <div className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-3 rounded-lg">
+                        <Icon name="Radio" size={28} />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-muted-foreground mb-1">Смотрите на канале</p>
+                        <p className="text-2xl font-bold text-foreground">Новые друзья ТВ</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <div className="inline-block bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
