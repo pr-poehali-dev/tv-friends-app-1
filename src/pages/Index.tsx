@@ -507,7 +507,7 @@ const Index = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-orange-100 to-yellow-100 dark:from-orange-900/30 dark:to-yellow-900/30 rounded-lg">
+                    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-orange-100 to-yellow-100 dark:from-orange-900/30 dark:to-yellow-900/30 rounded-lg mb-6">
                       <div className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white p-3 rounded-lg">
                         <Icon name="Radio" size={28} />
                       </div>
@@ -515,6 +515,64 @@ const Index = () => {
                         <p className="text-sm text-muted-foreground mb-1">Смотрите на канале</p>
                         <p className="text-2xl font-bold text-foreground">Новые друзья ТВ</p>
                       </div>
+                    </div>
+
+                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-xl p-6 border-2 border-blue-200 dark:border-blue-800 mb-6">
+                      <div className="flex items-start gap-3 mb-4">
+                        <div className="bg-blue-500 text-white p-2 rounded-lg">
+                          <Icon name="Video" size={24} />
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-bold text-foreground mb-2">Присылайте свои видеоролики!</h4>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Максим Зоев вместе с телезрителями будет смотреть крутые видеоролики, которые отправили наши зрители!
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-slate-900 rounded-lg p-4 mb-4">
+                        <p className="font-bold text-foreground mb-3 flex items-center gap-2">
+                          <Icon name="Send" size={20} className="text-blue-500" />
+                          Как отправить видео:
+                        </p>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <p className="text-foreground/80">Загрузите на сайте телеканала <span className="font-semibold">Новые друзья ТВ</span></p>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <p className="text-foreground/80">Или отправьте на почту: <a href="mailto:etonadovidet@novye-druzya-tv.ru" className="font-semibold text-blue-600 hover:underline">etonadovidet@novye-druzya-tv.ru</a></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-gradient-to-br from-yellow-100 to-orange-100 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-lg p-4 border-2 border-yellow-300 dark:border-yellow-700">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Icon name="Trophy" size={20} className="text-yellow-600" />
+                            <p className="font-bold text-foreground">Выпуск #1</p>
+                          </div>
+                          <p className="text-sm text-foreground/80 mb-1">🦊 <strong>Большая лиса стала мини-лисёнком</strong></p>
+                          <p className="text-xs text-muted-foreground">Победитель первого выпуска</p>
+                        </div>
+                        
+                        <div className="bg-gradient-to-br from-yellow-100 to-orange-100 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-lg p-4 border-2 border-yellow-300 dark:border-yellow-700">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Icon name="Trophy" size={20} className="text-yellow-600" />
+                            <p className="font-bold text-foreground">Выпуск #2</p>
+                          </div>
+                          <p className="text-sm text-foreground/80 mb-1">🏗️ <strong>LEGO человечек и башня из Дубая</strong></p>
+                          <p className="text-xs text-muted-foreground">Победитель второго выпуска</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="text-center">
+                      <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold shadow-lg">
+                        <Icon name="Upload" size={20} className="mr-2" />
+                        Отправить свой видеоролик
+                      </Button>
                     </div>
                   </div>
                 </div>
