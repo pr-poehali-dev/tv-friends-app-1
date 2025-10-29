@@ -6,9 +6,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
 import { contestVideos } from '@/data/contestVideos';
+import ShowIntro from '@/components/ShowIntro';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [showIntro, setShowIntro] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -50,6 +52,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {showIntro && <ShowIntro onComplete={() => setShowIntro(false)} />}
+      
       <header className="sticky top-0 z-50 bg-secondary border-b border-border/40 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-16">
@@ -473,7 +477,7 @@ const Index = () => {
 
             <div className="max-w-5xl mx-auto mb-16">
               <Card className="overflow-hidden border-2 border-orange-500/40 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/20 dark:to-yellow-950/20">
-                <CardHeader className="text-center pb-8">
+                <CardHeader className="text-center pb-4">
                   <div className="inline-block mx-auto bg-gradient-to-r from-red-600 to-orange-500 text-white px-6 py-3 rounded-full text-lg font-bold mb-6 shadow-lg animate-pulse">
                     <Icon name="Sparkles" size={24} className="inline mr-2" />
                     НЕ ПРОПУСТИТЕ! ТРЕТИЙ ВЫПУСК
@@ -484,10 +488,20 @@ const Index = () => {
                   <CardDescription className="text-lg text-foreground/80 mb-4">
                     Самые крутые видеоролики в новом хит-параде
                   </CardDescription>
-                  <div className="bg-gradient-to-r from-red-100 to-orange-100 dark:from-red-900/30 dark:to-orange-900/30 rounded-lg p-4 border-2 border-red-300 dark:border-red-700 inline-block">
+                  <div className="bg-gradient-to-r from-red-100 to-orange-100 dark:from-red-900/30 dark:to-orange-900/30 rounded-lg p-4 border-2 border-red-300 dark:border-red-700 inline-block mb-6">
                     <p className="text-foreground font-bold text-lg">
                       📅 Четверг, 30 октября • ⏰ 10:00 утра
                     </p>
+                  </div>
+                  <div className="px-4">
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold shadow-lg"
+                      onClick={() => setShowIntro(true)}
+                    >
+                      <Icon name="Play" size={24} className="mr-2" />
+                      Смотреть заставку программы
+                    </Button>
                   </div>
                 </CardHeader>
                 <div className="px-6 pb-6">
