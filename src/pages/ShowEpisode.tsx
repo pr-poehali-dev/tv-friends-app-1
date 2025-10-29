@@ -57,6 +57,60 @@ const ShowEpisode = () => {
       duration: '1:50',
       thumbnail: 'https://images.unsplash.com/photo-1547447134-cd3f5c716030?w=800&h=600&fit=crop',
       description: 'Показываю простые трюки на скейтборде'
+    },
+    {
+      id: 6,
+      title: 'Домашний питомец хомяк',
+      author: 'Елена Морозова',
+      city: 'Краснодар',
+      duration: '1:10',
+      thumbnail: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=800&h=600&fit=crop',
+      description: 'Мой хомячок показывает свои любимые фокусы'
+    },
+    {
+      id: 7,
+      title: 'Закат на море с дрона',
+      author: 'Сергей Волков',
+      city: 'Сочи',
+      duration: '1:35',
+      thumbnail: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
+      description: 'Невероятные виды заката над Чёрным морем'
+    },
+    {
+      id: 8,
+      title: 'Рисую портрет за 60 секунд',
+      author: 'Ольга Смирнова',
+      city: 'Нижний Новгород',
+      duration: '1:00',
+      thumbnail: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&h=600&fit=crop',
+      description: 'Скоростное рисование портрета углём'
+    },
+    {
+      id: 9,
+      title: 'Футбольный фристайл',
+      author: 'Артём Козлов',
+      city: 'Ростов-на-Дону',
+      duration: '1:25',
+      thumbnail: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=600&fit=crop',
+      description: 'Демонстрирую свои лучшие трюки с мячом'
+    },
+    {
+      id: 10,
+      title: 'Превращение комнаты',
+      author: 'Виктория Лебедева',
+      city: 'Воронеж',
+      duration: '2:30',
+      thumbnail: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800&h=600&fit=crop',
+      description: 'Преображаю свою комнату за один день своими руками'
+    },
+    {
+      id: 11,
+      title: 'Мой попугай говорит фразы',
+      author: 'Михаил Орлов',
+      city: 'Самара',
+      duration: '0:55',
+      thumbnail: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800&h=600&fit=crop',
+      description: 'Попугай Кеша повторяет смешные фразы из фильмов'
     }
   ];
 
