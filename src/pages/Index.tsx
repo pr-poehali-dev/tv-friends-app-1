@@ -493,14 +493,22 @@ const Index = () => {
                       📅 Четверг, 30 октября • ⏰ 10:00 утра
                     </p>
                   </div>
-                  <div className="px-4">
+                  <div className="px-4 flex gap-3 justify-center flex-wrap">
                     <Button 
                       size="lg" 
                       className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold shadow-lg"
                       onClick={() => setShowIntro(true)}
                     >
+                      <Icon name="Sparkles" size={24} className="mr-2" />
+                      Заставка программы
+                    </Button>
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold shadow-lg"
+                      onClick={() => window.location.href = '/show-episode'}
+                    >
                       <Icon name="Play" size={24} className="mr-2" />
-                      Смотреть заставку программы
+                      Смотреть выпуск #3
                     </Button>
                   </div>
                 </CardHeader>
