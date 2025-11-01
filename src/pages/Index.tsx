@@ -523,13 +523,22 @@ const Index = () => {
                       <div className="text-4xl mb-3">🏰⚔️🏆</div>
                       <h3 className="text-2xl font-bold text-foreground mb-2">Форт Боярд: Возвращение легенды</h3>
                       <p className="text-muted-foreground mb-4">Премьера: 10 ноября • По понедельникам в 21:30</p>
-                      <Button 
-                        size="lg" 
-                        className="bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white font-bold shadow-lg"
-                        onClick={() => setShowIntroFortBoyard(true)}
-                      >
-                        ⚜️ Заставка Форт Боярд
-                      </Button>
+                      <div className="flex gap-3 justify-center flex-wrap">
+                        <Button 
+                          size="lg" 
+                          className="bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white font-bold shadow-lg"
+                          onClick={() => setShowIntroFortBoyard(true)}
+                        >
+                          ⚜️ Заставка
+                        </Button>
+                        <Button 
+                          size="lg" 
+                          className="bg-gradient-to-r from-yellow-600 to-amber-700 hover:from-yellow-700 hover:to-amber-800 text-white font-bold shadow-lg"
+                          onClick={() => window.location.href = '/fort-boyard'}
+                        >
+                          🏰 Смотреть выпуск
+                        </Button>
+                      </div>
                     </div>
 
                     <div className="bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-xl p-6 border-2 border-blue-300">

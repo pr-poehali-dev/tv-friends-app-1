@@ -9,6 +9,7 @@ import Breakfast from "./pages/Breakfast";
 import Poehali from "./pages/Poehali";
 import ShowEpisode from "./pages/ShowEpisode";
 import ShowEpisodeNewYear from "./pages/ShowEpisodeNewYear";
+import FortBoyard from "./pages/FortBoyard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/poehali" element={<Poehali />} />
           <Route path="/show-episode" element={<ShowEpisode />} />
           <Route path="/show-episode-newyear" element={<ShowEpisodeNewYear />} />
+          <Route path="/fort-boyard" element={<FortBoyard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
