@@ -541,6 +541,19 @@ const Index = () => {
                       </div>
                     </div>
 
+                    <div className="bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-xl p-6 border-2 border-green-400">
+                      <div className="text-4xl mb-3">⚽🏆🎯</div>
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Большой футбол - ФИНАЛ!</h3>
+                      <p className="text-muted-foreground mb-4">Малиновые Цветочки 🌸 vs Рыжие Крутышки 🦁</p>
+                      <Button 
+                        size="lg" 
+                        className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold shadow-lg"
+                        onClick={() => window.location.href = '/big-football-final'}
+                      >
+                        ⚽ Смотреть финал
+                      </Button>
+                    </div>
+
                     <div className="bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-xl p-6 border-2 border-blue-300">
                       <div className="text-4xl mb-3">🎄❄️🎅</div>
                       <h3 className="text-2xl font-bold text-foreground mb-2">Новогодний выпуск!</h3>
