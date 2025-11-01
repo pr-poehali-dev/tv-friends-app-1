@@ -3,9 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import ShowIntroBigFootball from '@/components/ShowIntroBigFootball';
+import AdBreak from '@/components/AdBreak';
 
 const BigFootballFinal = () => {
   const [showIntro, setShowIntro] = useState(false);
+  const [showAd, setShowAd] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(0);
 
   const videos = [
@@ -74,111 +76,175 @@ const BigFootballFinal = () => {
     },
     {
       id: 10,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 11,
       title: "Начало второго тайма",
       thumbnail: "🔄",
       description: "Рыжие выходят с новыми силами",
       moment: "Второй тайм - последний шанс!"
     },
     {
-      id: 11,
+      id: 12,
       title: "ГОЛ! Рыжие сравнивают счет!",
       thumbnail: "💥",
       description: "Точный удар! Счет 1:1!",
       moment: "ГОООООЛ! 1:1!"
     },
     {
-      id: 12,
+      id: 13,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 14,
       title: "Напряженная середина тайма",
       thumbnail: "😰",
       description: "Борьба в центре поля, никто не хочет уступать",
       moment: "Кто окажется сильнее?"
     },
     {
-      id: 13,
+      id: 15,
       title: "Опасный штрафной Малиновых",
       thumbnail: "🦵",
       description: "Штрафной удар у ворот Рыжих",
       moment: "Все замерли!"
     },
     {
-      id: 14,
+      id: 16,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 17,
       title: "Невероятный сейв вратаря!",
       thumbnail: "🧤",
       description: "Вратарь Рыжих делает сейв матча!",
       moment: "Фантастическая игра!"
     },
     {
-      id: 15,
+      id: 18,
       title: "Последние минуты матча",
       thumbnail: "⏱️",
       description: "Осталось 3 минуты до конца. Счет 1:1",
       moment: "Время истекает!"
     },
     {
-      id: 16,
+      id: 19,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 20,
       title: "ГОЛ НА ПОСЛЕДНЕЙ МИНУТЕ!",
       thumbnail: "🌟",
       description: "Невероятно! Малиновые забивают победный гол! 2:1!",
       moment: "ГОООООЛ! ПОБЕДА!"
     },
     {
-      id: 17,
+      id: 21,
       title: "Финальный свисток",
       thumbnail: "🎊",
       description: "Матч окончен! Малиновые Цветочки - чемпионы!",
       moment: "2:1 - МАЛИНОВЫЕ ПОБЕЖДАЮТ!"
     },
     {
-      id: 18,
+      id: 22,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 23,
       title: "Награждение победителей",
       thumbnail: "🏆",
       description: "Вручение главного трофея сезона",
       moment: "Поднятие кубка!"
     },
     {
-      id: 19,
+      id: 24,
       title: "Речь капитана",
       thumbnail: "🎤",
       description: "Капитан Малиновых благодарит команду и болельщиков",
       moment: "Слова победителя"
     },
     {
-      id: 20,
+      id: 25,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 26,
       title: "Общее фото на память",
       thumbnail: "📸",
       description: "Все участники церемонии собираются для группового фото",
       moment: "Момент на память!"
     },
     {
-      id: 21,
+      id: 27,
       title: "Включаем первую конфетти машину!",
       thumbnail: "🎊",
       description: "ПЕРВЫЙ ЗАЛП КОНФЕТТИ! Золотые и малиновые конфетти взлетают в небо!",
       moment: "БУМ! КОНФЕТТИ №1!"
     },
     {
-      id: 22,
+      id: 28,
       title: "Вторая конфетти машина!",
       thumbnail: "🎉",
       description: "ВТОРОЙ ЗАЛП! Еще больше конфетти заполняют стадион!",
       moment: "БУМ! КОНФЕТТИ №2!"
     },
     {
-      id: 23,
+      id: 29,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 30,
       title: "ДИСКОТЕКА НАЧИНАЕТСЯ!",
       thumbnail: "🕺",
       description: "Крутая музыка, танцы, огни! Празднование в полном разгаре!",
       moment: "ТАНЦУЮТ ВСЕ!"
     },
     {
-      id: 24,
+      id: 31,
       title: "Конфетти машины снова работают!",
       thumbnail: "✨",
       description: "Обе машины дают повторный залп конфетти под музыку!",
       moment: "ЕЩЕ КОНФЕТТИ! x2!"
     },
     {
-      id: 25,
+      id: 32,
+      title: "📺 РЕКЛАМНАЯ ПАУЗА - 400 секунд",
+      thumbnail: "📺",
+      description: "Смотрите шоу СУПЕР АВАТАР и другие программы!",
+      moment: "🎬 РЕКЛАМА",
+      isAd: true
+    },
+    {
+      id: 33,
       title: "Эпичное завершение сезона",
       thumbnail: "🌟",
       description: "Конфетти падают, музыка гремит, чемпионы танцуют с кубком!",
@@ -187,13 +253,27 @@ const BigFootballFinal = () => {
   ];
 
   const goToVideo = (index: number) => {
-    setCurrentVideo(index);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const video = videos[index];
+    if (video.isAd) {
+      setShowAd(true);
+    } else {
+      setCurrentVideo(index);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleAdComplete = () => {
+    setShowAd(false);
+    const nextIndex = currentVideo + 1;
+    if (nextIndex < videos.length && !videos[nextIndex].isAd) {
+      setCurrentVideo(nextIndex);
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {showIntro && <ShowIntroBigFootball onComplete={() => setShowIntro(false)} />}
+      {showAd && <AdBreak onSkip={handleAdComplete} />}
 
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 relative">
@@ -381,7 +461,9 @@ const BigFootballFinal = () => {
               <Card 
                 key={video.id}
                 className={`cursor-pointer transition-all hover:scale-105 ${
-                  currentVideo === index 
+                  video.isAd 
+                    ? 'bg-gradient-to-br from-purple-200 to-pink-200 dark:from-purple-900/50 dark:to-pink-900/50 border-2 border-red-400' 
+                    : currentVideo === index 
                     ? 'ring-4 ring-green-500 bg-green-50 dark:bg-green-900/30' 
                     : 'hover:bg-gray-50 dark:hover:bg-gray-800'
                 }`}
@@ -389,7 +471,9 @@ const BigFootballFinal = () => {
               >
                 <CardHeader className="p-4">
                   <div className="text-5xl text-center mb-2">{video.thumbnail}</div>
-                  <CardTitle className="text-sm text-center leading-tight">{video.title}</CardTitle>
+                  <CardTitle className={`text-sm text-center leading-tight ${video.isAd ? 'text-red-700 dark:text-red-400 font-bold' : ''}`}>
+                    {video.title}
+                  </CardTitle>
                   <CardDescription className="text-xs text-center">
                     {index + 1}/{videos.length}
                   </CardDescription>
