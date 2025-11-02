@@ -36,11 +36,18 @@ export default function UtroNovieDruzia() {
               УТРО
             </h1>
             <div className="flex items-center justify-center gap-6 mb-6">
-              <div className="text-6xl animate-bounce">☀️</div>
+              <div className="text-6xl animate-bounce">🎵</div>
               <h2 className="text-5xl md:text-6xl font-bold text-orange-700 drop-shadow-lg">
                 Новые друзья
               </h2>
-              <div className="text-6xl animate-bounce" style={{animationDelay: '0.3s'}}>🌈</div>
+              <div className="text-6xl animate-bounce" style={{animationDelay: '0.3s'}}>🎶</div>
+            </div>
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full inline-block mb-4 shadow-xl">
+              <p className="text-2xl font-bold flex items-center gap-3">
+                <Icon name="Music" size={28} />
+                МУЗЫКАЛЬНОЕ УТРЕННЕЕ ШОУ
+                <Icon name="Radio" size={28} />
+              </p>
             </div>
           </div>
 
@@ -78,30 +85,45 @@ export default function UtroNovieDruzia() {
           <Card className="bg-white/80 backdrop-blur-sm border-4 border-orange-400 hover:scale-105 transition-transform">
             <CardHeader>
               <CardTitle className="text-2xl flex items-center gap-3">
-                <span className="text-5xl">👥</span>
+                <span className="text-5xl">🎤</span>
                 Ведущие
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <div className="flex items-center gap-3 p-3 bg-orange-100 rounded-lg">
-                <span className="text-3xl">👨‍💼</span>
+              <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg border-2 border-orange-300">
+                <span className="text-4xl">🎸</span>
                 <div>
-                  <p className="font-bold text-lg">Максим Радостный</p>
-                  <p className="text-sm text-muted-foreground">Главный ведущий</p>
+                  <p className="font-bold text-xl">Максим Зуев</p>
+                  <p className="text-sm text-muted-foreground">Главный ведущий, музыкант</p>
+                  <div className="flex gap-1 mt-1">
+                    <span className="text-xs">🎵</span>
+                    <span className="text-xs">🎸</span>
+                    <span className="text-xs">🎹</span>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 p-3 bg-pink-100 rounded-lg">
-                <span className="text-3xl">👩‍💼</span>
+              <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg border-2 border-gray-300">
+                <span className="text-4xl">🐱</span>
                 <div>
-                  <p className="font-bold text-lg">Анна Солнечная</p>
-                  <p className="text-sm text-muted-foreground">Со-ведущая</p>
+                  <p className="font-bold text-xl">Кот Батон</p>
+                  <p className="text-sm text-muted-foreground">Со-ведущий, талисман шоу</p>
+                  <div className="flex gap-1 mt-1">
+                    <span className="text-xs">😺</span>
+                    <span className="text-xs">🎤</span>
+                    <span className="text-xs">🐾</span>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 p-3 bg-yellow-100 rounded-lg">
-                <span className="text-3xl">👨‍🍳</span>
+              <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg border-2 border-pink-300">
+                <span className="text-4xl">🎤</span>
                 <div>
-                  <p className="font-bold text-lg">Игорь Вкусный</p>
-                  <p className="text-sm text-muted-foreground">Кулинарный эксперт</p>
+                  <p className="font-bold text-xl">Алиса</p>
+                  <p className="text-sm text-muted-foreground">Со-ведущая, вокалистка</p>
+                  <div className="flex gap-1 mt-1">
+                    <span className="text-xs">🎵</span>
+                    <span className="text-xs">🎤</span>
+                    <span className="text-xs">⭐</span>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -110,34 +132,34 @@ export default function UtroNovieDruzia() {
           <Card className="bg-white/80 backdrop-blur-sm border-4 border-yellow-400 hover:scale-105 transition-transform">
             <CardHeader>
               <CardTitle className="text-2xl flex items-center gap-3">
-                <span className="text-5xl">📋</span>
+                <span className="text-5xl">🎵</span>
                 Программа
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm">
               <div className="p-2 bg-gradient-to-r from-orange-100 to-orange-200 rounded">
-                <p className="font-bold">7:00 - 7:15</p>
-                <p>Доброе утро! Новости дня</p>
+                <p className="font-bold flex items-center gap-2">🌅 7:00 - 7:15</p>
+                <p>Музыкальное приветствие! Новости</p>
               </div>
               <div className="p-2 bg-gradient-to-r from-yellow-100 to-yellow-200 rounded">
-                <p className="font-bold">7:15 - 7:30</p>
-                <p>Утренняя зарядка с чемпионом</p>
+                <p className="font-bold flex items-center gap-2">🎸 7:15 - 7:30</p>
+                <p>Хит дня от Максима Зуева</p>
               </div>
               <div className="p-2 bg-gradient-to-r from-pink-100 to-pink-200 rounded">
-                <p className="font-bold">7:30 - 8:00</p>
-                <p>Завтрак с Игорем: рецепты</p>
+                <p className="font-bold flex items-center gap-2">🎤 7:30 - 8:00</p>
+                <p>Утренний концерт с Алисой</p>
               </div>
               <div className="p-2 bg-gradient-to-r from-purple-100 to-purple-200 rounded">
-                <p className="font-bold">8:00 - 8:30</p>
-                <p>Гости в студии: интервью</p>
+                <p className="font-bold flex items-center gap-2">😺 8:00 - 8:30</p>
+                <p>Рубрика Кота Батона: истории</p>
               </div>
               <div className="p-2 bg-gradient-to-r from-blue-100 to-blue-200 rounded">
-                <p className="font-bold">8:30 - 9:00</p>
-                <p>Полезные советы от экспертов</p>
+                <p className="font-bold flex items-center gap-2">🎶 8:30 - 9:00</p>
+                <p>Музыканты в гостях у шоу</p>
               </div>
               <div className="p-2 bg-gradient-to-r from-green-100 to-green-200 rounded">
-                <p className="font-bold">9:00 - 10:00</p>
-                <p>Игры и конкурсы, общение</p>
+                <p className="font-bold flex items-center gap-2">🎵 9:00 - 10:00</p>
+                <p>Караоке со зрителями, конкурсы</p>
               </div>
             </CardContent>
           </Card>
@@ -145,20 +167,20 @@ export default function UtroNovieDruzia() {
           <Card className="bg-white/80 backdrop-blur-sm border-4 border-pink-400 hover:scale-105 transition-transform">
             <CardHeader>
               <CardTitle className="text-2xl flex items-center gap-3">
-                <span className="text-5xl">🎯</span>
-                Рубрики
+                <span className="text-5xl">🎼</span>
+                Музыкальные рубрики
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
               {[
-                { icon: '🌤️', title: 'Погода на сегодня' },
-                { icon: '🏃', title: 'Спорт и здоровье' },
-                { icon: '🍳', title: 'Рецепт дня' },
-                { icon: '🎭', title: 'Афиша культуры' },
-                { icon: '👶', title: 'Для родителей' },
-                { icon: '🐕', title: 'Питомцы недели' },
-                { icon: '📱', title: 'Гаджеты и новинки' },
-                { icon: '💝', title: 'Истории зрителей' }
+                { icon: '🎸', title: 'Песня дня от Максима' },
+                { icon: '🎤', title: 'Утренний дуэт с Алисой' },
+                { icon: '😺', title: 'Мурлыканье Батона' },
+                { icon: '🎵', title: 'Хит-парад недели' },
+                { icon: '🎹', title: 'Классика на завтрак' },
+                { icon: '🎶', title: 'Новинки музыки' },
+                { icon: '🎼', title: 'Угадай мелодию' },
+                { icon: '🎧', title: 'Плейлист слушателей' }
               ].map((rubric, i) => (
                 <div key={i} className="flex items-center gap-2 p-2 hover:bg-pink-100 rounded transition-colors">
                   <span className="text-2xl">{rubric.icon}</span>
@@ -173,19 +195,19 @@ export default function UtroNovieDruzia() {
           <CardContent className="p-8">
             <div className="text-center space-y-6">
               <div className="flex items-center justify-center gap-4 text-6xl mb-4">
-                <span className="animate-bounce">☕</span>
-                <span className="animate-bounce" style={{animationDelay: '0.2s'}}>🥐</span>
-                <span className="animate-bounce" style={{animationDelay: '0.4s'}}>🍳</span>
-                <span className="animate-bounce" style={{animationDelay: '0.6s'}}>🥗</span>
-                <span className="animate-bounce" style={{animationDelay: '0.8s'}}>🧃</span>
+                <span className="animate-bounce">🎸</span>
+                <span className="animate-bounce" style={{animationDelay: '0.2s'}}>🎤</span>
+                <span className="animate-bounce" style={{animationDelay: '0.4s'}}>😺</span>
+                <span className="animate-bounce" style={{animationDelay: '0.6s'}}>🎵</span>
+                <span className="animate-bounce" style={{animationDelay: '0.8s'}}>🎶</span>
               </div>
               
               <p className="text-3xl font-black text-orange-700">
-                Начни свой день правильно!
+                Просыпайся под музыку!
               </p>
               
               <p className="text-xl text-orange-600 font-semibold">
-                Заряд позитива, полезные советы и отличное настроение каждое утро!
+                Хиты, живая музыка, караоке и отличное настроение каждое утро!
               </p>
               
               <div className="flex items-center justify-center gap-8 mt-6">
