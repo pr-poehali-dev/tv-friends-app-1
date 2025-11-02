@@ -12,6 +12,7 @@ import ShowEpisodeNewYear from "./pages/ShowEpisodeNewYear";
 import FortBoyard from "./pages/FortBoyard";
 import BigFootballFinal from "./pages/BigFootballFinal";
 import UtroNovieDruzia from "./pages/UtroNovieDruzia";
+import UtroEpisodes from "./pages/UtroEpisodes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/fort-boyard" element={<FortBoyard />} />
           <Route path="/big-football-final" element={<BigFootballFinal />} />
           <Route path="/utro-novie-druzia" element={<UtroNovieDruzia />} />
+          <Route path="/utro-episodes" element={<UtroEpisodes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
