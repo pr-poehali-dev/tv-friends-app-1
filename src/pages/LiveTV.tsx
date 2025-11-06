@@ -549,21 +549,21 @@ export default function LiveTV() {
                   </p>
                   <div className="grid md:grid-cols-2 gap-4 mb-4">
                     <div className="bg-yellow-100 dark:bg-yellow-900/30 p-4 rounded-lg">
-                      <div className="text-4xl mb-2">📍</div>
-                      <p className="font-bold text-lg">Место</p>
-                      <p className="text-sm">Сфера Радости</p>
+                      <div className="text-4xl mb-2">🏛️</div>
+                      <p className="font-bold text-lg">Церемония вручения</p>
+                      <p className="text-sm">5 мая • Концертный зал "Сфера Радости"</p>
                     </div>
                     <div className="bg-yellow-100 dark:bg-yellow-900/30 p-4 rounded-lg">
-                      <div className="text-4xl mb-2">📅</div>
-                      <p className="font-bold text-lg">Дата</p>
-                      <p className="text-sm">5 мая 2026</p>
+                      <div className="text-4xl mb-2">📺</div>
+                      <p className="font-bold text-lg">Прямая трансляция</p>
+                      <p className="text-sm">30 мая 2026, 20:35</p>
                     </div>
                   </div>
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-3">
                     Голосование за лучшие программы, ведущих и проекты года
                   </p>
                   <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg inline-block">
-                    <p className="text-sm font-bold">✨ Прямой эфир • 30 мая 2026 ✨</p>
+                    <p className="text-sm font-bold">✨ Смотрите прямую трансляцию на телеканале "Новые друзья ТВ" ✨</p>
                   </div>
                 </div>
                 <p className="text-xl font-bold text-yellow-700">

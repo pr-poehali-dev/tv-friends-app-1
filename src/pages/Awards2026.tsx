@@ -304,11 +304,11 @@ export default function Awards2026() {
             </div>
             <div className="flex items-center gap-2">
               <Icon name="MapPin" className="text-orange-600" size={24} />
-              <span className="font-bold">Сфера Радости</span>
+              <span className="font-bold">Концертный зал "Сфера Радости"</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Calendar" className="text-red-600" size={24} />
-              <span className="font-bold">5 мая 2026</span>
+              <span className="font-bold">Церемония: 5 мая • Эфир: 30 мая</span>
             </div>
           </div>
         </div>
@@ -321,7 +321,7 @@ export default function Awards2026() {
                   Проголосовано: {getVoteCount()} / 19 номинаций
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Церемония вручения: 30 мая 2026 в прямом эфире
+                  Церемония: 5 мая 2026 • Трансляция: 30 мая 2026
                 </p>
               </div>
               <Button
@@ -354,7 +354,8 @@ export default function Awards2026() {
                 Ваши голоса учтены. Результаты будут объявлены на церемонии вручения премии.
               </p>
               <p className="text-lg font-bold text-green-600 dark:text-green-400">
-                📺 Смотрите церемонию 30 мая 2026 в 20:35 на телеканале "Новые друзья ТВ"
+                🏛️ Церемония вручения: 5 мая в концертном зале "Сфера Радости"<br/>
+                📺 Прямая трансляция: 30 мая 2026 в 20:35 на телеканале "Новые друзья ТВ"
               </p>
             </CardContent>
           </Card>
@@ -420,18 +421,18 @@ export default function Awards2026() {
             <h2 className="text-3xl font-black mb-4">Церемония вручения премии</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-6">
               <div className="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg">
-                <div className="text-4xl mb-2">📅</div>
+                <div className="text-4xl mb-2">🗳️</div>
                 <p className="font-bold text-lg mb-1">Голосование</p>
                 <p className="text-sm text-muted-foreground">До 5 мая 2026</p>
               </div>
               <div className="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg">
-                <div className="text-4xl mb-2">📍</div>
-                <p className="font-bold text-lg mb-1">Место</p>
-                <p className="text-sm text-muted-foreground">Сфера Радости</p>
+                <div className="text-4xl mb-2">🏛️</div>
+                <p className="font-bold text-lg mb-1">Церемония вручения</p>
+                <p className="text-sm text-muted-foreground">5 мая • Концертный зал "Сфера Радости"</p>
               </div>
               <div className="bg-white/70 dark:bg-gray-800/70 p-6 rounded-lg">
                 <div className="text-4xl mb-2">📺</div>
-                <p className="font-bold text-lg mb-1">Трансляция</p>
+                <p className="font-bold text-lg mb-1">Прямая трансляция</p>
                 <p className="text-sm text-muted-foreground">30 мая 2026, 20:35</p>
               </div>
             </div>
