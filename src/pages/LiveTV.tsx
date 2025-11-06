@@ -6,7 +6,7 @@ import Icon from '@/components/ui/icon';
 interface TVProgram {
   id: number;
   title: string;
-  type: 'show' | 'series' | 'movie' | 'cartoon' | 'news' | 'ad';
+  type: 'show' | 'series' | 'movie' | 'cartoon' | 'news' | 'ad' | 'award';
   duration: number;
   thumbnail: string;
   description: string;
@@ -17,14 +17,73 @@ interface TVProgram {
   episode?: number;
 }
 
-const getCurrentTime = () => {
-  const now = new Date();
-  return `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+const timeToMinutes = (time: string): number => {
+  const [hours, minutes] = time.split(':').map(Number);
+  return hours * 60 + minutes;
+};
+
+const minutesToTime = (minutes: number): string => {
+  const hours = Math.floor(minutes / 60) % 24;
+  const mins = minutes % 60;
+  return `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
 };
 
 const schedule: TVProgram[] = [
   {
     id: 1,
+    title: 'Ночное кино',
+    type: 'movie',
+    duration: 120,
+    thumbnail: '🎬',
+    description: 'Художественный фильм',
+    startTime: '00:00',
+    endTime: '02:00',
+    ageRating: '16+',
+  },
+  {
+    id: 2,
+    title: 'Ночные новости',
+    type: 'news',
+    duration: 30,
+    thumbnail: '📰',
+    description: 'Итоги дня',
+    startTime: '02:00',
+    endTime: '02:30',
+  },
+  {
+    id: 3,
+    title: 'Документальный фильм',
+    type: 'movie',
+    duration: 90,
+    thumbnail: '🎥',
+    description: 'Познавательное кино',
+    startTime: '02:30',
+    endTime: '04:00',
+    ageRating: '12+',
+  },
+  {
+    id: 4,
+    title: 'Реклама',
+    type: 'ad',
+    duration: 5,
+    thumbnail: '📺',
+    description: 'Рекламная пауза',
+    startTime: '04:00',
+    endTime: '04:05',
+  },
+  {
+    id: 5,
+    title: 'Классика кино',
+    type: 'movie',
+    duration: 115,
+    thumbnail: '🎞️',
+    description: 'Золотая коллекция',
+    startTime: '04:05',
+    endTime: '06:00',
+    ageRating: '6+',
+  },
+  {
+    id: 6,
     title: 'Утренние новости',
     type: 'news',
     duration: 30,
@@ -34,7 +93,7 @@ const schedule: TVProgram[] = [
     endTime: '06:30',
   },
   {
-    id: 2,
+    id: 7,
     title: 'Смешарики',
     type: 'cartoon',
     duration: 30,
@@ -45,7 +104,7 @@ const schedule: TVProgram[] = [
     ageRating: '0+',
   },
   {
-    id: 3,
+    id: 8,
     title: 'Три кота',
     type: 'cartoon',
     duration: 30,
@@ -56,7 +115,7 @@ const schedule: TVProgram[] = [
     ageRating: '0+',
   },
   {
-    id: 4,
+    id: 9,
     title: 'Кухня здоровья',
     type: 'show',
     duration: 60,
@@ -67,7 +126,7 @@ const schedule: TVProgram[] = [
     ageRating: '6+',
   },
   {
-    id: 5,
+    id: 10,
     title: 'Реклама',
     type: 'ad',
     duration: 5,
@@ -77,7 +136,7 @@ const schedule: TVProgram[] = [
     endTime: '08:35',
   },
   {
-    id: 6,
+    id: 11,
     title: 'Это надо видеть!',
     type: 'show',
     duration: 55,
@@ -88,7 +147,7 @@ const schedule: TVProgram[] = [
     ageRating: '12+',
   },
   {
-    id: 7,
+    id: 12,
     title: 'Машины сказки',
     type: 'cartoon',
     duration: 30,
@@ -99,7 +158,7 @@ const schedule: TVProgram[] = [
     ageRating: '0+',
   },
   {
-    id: 8,
+    id: 13,
     title: 'Фиксики',
     type: 'cartoon',
     duration: 60,
@@ -110,7 +169,7 @@ const schedule: TVProgram[] = [
     ageRating: '0+',
   },
   {
-    id: 9,
+    id: 14,
     title: 'Реклама',
     type: 'ad',
     duration: 5,
@@ -120,7 +179,7 @@ const schedule: TVProgram[] = [
     endTime: '11:05',
   },
   {
-    id: 10,
+    id: 15,
     title: 'Дом-2',
     type: 'series',
     duration: 55,
@@ -133,7 +192,7 @@ const schedule: TVProgram[] = [
     episode: 145,
   },
   {
-    id: 11,
+    id: 16,
     title: 'Дневные новости',
     type: 'news',
     duration: 30,
@@ -143,7 +202,7 @@ const schedule: TVProgram[] = [
     endTime: '12:30',
   },
   {
-    id: 12,
+    id: 17,
     title: 'Интерны',
     type: 'series',
     duration: 60,
@@ -156,7 +215,7 @@ const schedule: TVProgram[] = [
     episode: 12,
   },
   {
-    id: 13,
+    id: 18,
     title: 'Реклама',
     type: 'ad',
     duration: 5,
@@ -166,7 +225,7 @@ const schedule: TVProgram[] = [
     endTime: '13:35',
   },
   {
-    id: 14,
+    id: 19,
     title: 'Кухня',
     type: 'series',
     duration: 55,
@@ -179,7 +238,7 @@ const schedule: TVProgram[] = [
     episode: 8,
   },
   {
-    id: 15,
+    id: 20,
     title: 'Лунтик',
     type: 'cartoon',
     duration: 30,
@@ -190,7 +249,7 @@ const schedule: TVProgram[] = [
     ageRating: '0+',
   },
   {
-    id: 16,
+    id: 21,
     title: 'Барбоскины',
     type: 'cartoon',
     duration: 30,
@@ -201,7 +260,7 @@ const schedule: TVProgram[] = [
     ageRating: '0+',
   },
   {
-    id: 17,
+    id: 22,
     title: 'Реклама',
     type: 'ad',
     duration: 5,
@@ -211,7 +270,7 @@ const schedule: TVProgram[] = [
     endTime: '15:35',
   },
   {
-    id: 18,
+    id: 23,
     title: 'Форт Боярд',
     type: 'show',
     duration: 85,
@@ -222,7 +281,7 @@ const schedule: TVProgram[] = [
     ageRating: '6+',
   },
   {
-    id: 19,
+    id: 24,
     title: 'Вечерние новости',
     type: 'news',
     duration: 30,
@@ -232,7 +291,7 @@ const schedule: TVProgram[] = [
     endTime: '17:30',
   },
   {
-    id: 20,
+    id: 25,
     title: 'Ну, погоди!',
     type: 'cartoon',
     duration: 30,
@@ -243,7 +302,7 @@ const schedule: TVProgram[] = [
     ageRating: '0+',
   },
   {
-    id: 21,
+    id: 26,
     title: 'Реклама',
     type: 'ad',
     duration: 5,
@@ -253,7 +312,7 @@ const schedule: TVProgram[] = [
     endTime: '18:05',
   },
   {
-    id: 22,
+    id: 27,
     title: 'Крепкий орешек',
     type: 'movie',
     duration: 115,
@@ -264,7 +323,7 @@ const schedule: TVProgram[] = [
     ageRating: '16+',
   },
   {
-    id: 23,
+    id: 28,
     title: 'Главные новости',
     type: 'news',
     duration: 30,
@@ -274,7 +333,7 @@ const schedule: TVProgram[] = [
     endTime: '20:30',
   },
   {
-    id: 24,
+    id: 29,
     title: 'Реклама',
     type: 'ad',
     duration: 5,
@@ -284,67 +343,98 @@ const schedule: TVProgram[] = [
     endTime: '20:35',
   },
   {
-    id: 25,
-    title: 'Голос',
-    type: 'show',
-    duration: 85,
-    thumbnail: '🎤',
-    description: 'Музыкальное шоу талантов',
+    id: 30,
+    title: 'Премия "Новые друзья TV 2026"',
+    type: 'award',
+    duration: 145,
+    thumbnail: '🏆',
+    description: 'Церемония вручения премии. Прямая трансляция из Сферы Радости',
     startTime: '20:35',
-    endTime: '22:00',
+    endTime: '23:00',
     ageRating: '6+',
   },
   {
-    id: 26,
+    id: 31,
     title: 'Реклама',
     type: 'ad',
     duration: 5,
     thumbnail: '📺',
     description: 'Рекламная пауза',
-    startTime: '22:00',
-    endTime: '22:05',
+    startTime: '23:00',
+    endTime: '23:05',
   },
   {
-    id: 27,
+    id: 32,
     title: 'Вызов',
     type: 'movie',
     duration: 115,
     thumbnail: '🚀',
     description: 'Российский фильм о космосе',
-    startTime: '22:05',
-    endTime: '00:00',
+    startTime: '23:05',
+    endTime: '01:00',
     ageRating: '12+',
   },
 ];
 
 export default function LiveTV() {
-  const [currentTime, setCurrentTime] = useState(getCurrentTime());
+  const [virtualMinutes, setVirtualMinutes] = useState(0);
   const [volume, setVolume] = useState(50);
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [speed, setSpeed] = useState(60);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTime(getCurrentTime());
-    }, 1000);
+      setVirtualMinutes((prev) => (prev + 1) % 1440);
+    }, 1000 / speed);
     return () => clearInterval(timer);
-  }, []);
+  }, [speed]);
+
+  const currentTime = minutesToTime(virtualMinutes);
 
   const getCurrentProgram = () => {
-    const now = currentTime;
-    return schedule.find(
-      (program) => program.startTime <= now && program.endTime > now
-    ) || schedule[0];
+    const currentMins = virtualMinutes;
+    const program = schedule.find((p) => {
+      const startMins = timeToMinutes(p.startTime);
+      const endMins = timeToMinutes(p.endTime);
+      
+      if (endMins < startMins) {
+        return currentMins >= startMins || currentMins < endMins;
+      }
+      return currentMins >= startMins && currentMins < endMins;
+    });
+    return program || schedule[0];
   };
 
   const getNextPrograms = () => {
     const current = getCurrentProgram();
     const currentIndex = schedule.findIndex((p) => p.id === current.id);
-    return schedule.slice(currentIndex + 1, currentIndex + 4);
+    const result = [];
+    for (let i = 1; i <= 3; i++) {
+      const nextIndex = (currentIndex + i) % schedule.length;
+      result.push(schedule[nextIndex]);
+    }
+    return result;
+  };
+
+  const getProgress = () => {
+    const current = getCurrentProgram();
+    const startMins = timeToMinutes(current.startTime);
+    const endMins = timeToMinutes(current.endTime);
+    const currentMins = virtualMinutes;
+    
+    let elapsed = currentMins - startMins;
+    if (elapsed < 0) elapsed += 1440;
+    
+    let duration = endMins - startMins;
+    if (duration <= 0) duration += 1440;
+    
+    return Math.min(100, Math.max(0, (elapsed / duration) * 100));
   };
 
   const currentProgram = getCurrentProgram();
   const nextPrograms = getNextPrograms();
+  const progress = getProgress();
 
   const getProgramTypeColor = (type: string) => {
     switch (type) {
@@ -360,6 +450,8 @@ export default function LiveTV() {
         return 'bg-orange-500';
       case 'ad':
         return 'bg-gray-500';
+      case 'award':
+        return 'bg-yellow-500';
       default:
         return 'bg-gray-500';
     }
@@ -379,6 +471,8 @@ export default function LiveTV() {
         return 'НОВОСТИ';
       case 'ad':
         return 'РЕКЛАМА';
+      case 'award':
+        return 'ПРЕМИЯ';
       default:
         return '';
     }
@@ -395,14 +489,83 @@ export default function LiveTV() {
           <h1 className="text-5xl md:text-7xl font-black mb-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             НОВЫЕ ДРУЗЬЯ ТВ
           </h1>
-          <p className="text-2xl text-purple-300 font-bold">{currentTime}</p>
+          <p className="text-3xl text-purple-300 font-black">{currentTime}</p>
+          <div className="mt-4 flex items-center justify-center gap-3">
+            <span className="text-white text-sm">Скорость:</span>
+            <Button
+              size="sm"
+              variant={speed === 30 ? 'default' : 'outline'}
+              onClick={() => setSpeed(30)}
+              className="text-xs"
+            >
+              30x
+            </Button>
+            <Button
+              size="sm"
+              variant={speed === 60 ? 'default' : 'outline'}
+              onClick={() => setSpeed(60)}
+              className="text-xs"
+            >
+              60x
+            </Button>
+            <Button
+              size="sm"
+              variant={speed === 120 ? 'default' : 'outline'}
+              onClick={() => setSpeed(120)}
+              className="text-xs"
+            >
+              120x
+            </Button>
+          </div>
         </div>
+
+        {currentProgram.type === 'award' && (
+          <Card className="mb-6 bg-gradient-to-r from-yellow-100 via-orange-100 to-yellow-100 dark:from-yellow-900/40 dark:to-orange-900/40 border-4 border-yellow-500">
+            <CardContent className="p-8">
+              <div className="text-center space-y-4">
+                <div className="text-8xl mb-4">🏆🎉✨</div>
+                <div className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white px-6 py-3 rounded-xl inline-block">
+                  <p className="text-sm font-bold">ПРЯМАЯ ТРАНСЛЯЦИЯ</p>
+                </div>
+                <h2 className="text-5xl font-black text-yellow-700 leading-tight">
+                  ПРЕМИЯ "НОВЫЕ ДРУЗЬЯ TV 2026"
+                </h2>
+                <div className="bg-white/70 dark:bg-gray-800/70 p-6 rounded-xl max-w-3xl mx-auto">
+                  <p className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+                    Церемония вручения премии телеканала
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <div className="bg-yellow-100 dark:bg-yellow-900/30 p-4 rounded-lg">
+                      <div className="text-4xl mb-2">📍</div>
+                      <p className="font-bold text-lg">Место</p>
+                      <p className="text-sm">Сфера Радости</p>
+                    </div>
+                    <div className="bg-yellow-100 dark:bg-yellow-900/30 p-4 rounded-lg">
+                      <div className="text-4xl mb-2">📅</div>
+                      <p className="font-bold text-lg">Дата</p>
+                      <p className="text-sm">5 мая 2026</p>
+                    </div>
+                  </div>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-3">
+                    Голосование за лучшие программы, ведущих и проекты года
+                  </p>
+                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg inline-block">
+                    <p className="text-sm font-bold">✨ Прямой эфир • 30 мая 2026 ✨</p>
+                  </div>
+                </div>
+                <p className="text-xl font-bold text-yellow-700">
+                  🎬 Смотрите церемонию награждения в прямом эфире! 🎬
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         <div className={`mb-6 ${isFullscreen ? 'fixed inset-0 z-50 p-4 bg-black' : ''}`}>
           <Card className="bg-black border-4 border-purple-500 overflow-hidden">
             <CardContent className="p-0">
               <div className="relative aspect-video bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-                <div className="absolute top-4 left-4 z-10 flex gap-3">
+                <div className="absolute top-4 left-4 z-10 flex gap-3 flex-wrap">
                   <div className="bg-red-600 px-4 py-2 rounded-lg flex items-center gap-2 animate-pulse">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                     <span className="text-white font-bold text-sm">LIVE</span>
@@ -437,7 +600,7 @@ export default function LiveTV() {
                         Сезон {currentProgram.season} • Серия {currentProgram.episode}
                       </p>
                     )}
-                    <div className="flex items-center justify-center gap-4 mt-6 text-lg">
+                    <div className="flex items-center justify-center gap-4 mt-6 text-lg flex-wrap">
                       <span className="bg-purple-600 px-4 py-2 rounded-lg">
                         {currentProgram.startTime}
                       </span>
@@ -480,8 +643,8 @@ export default function LiveTV() {
                       </div>
                       <div className="h-2 bg-white/30 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-1000"
-                          style={{ width: '45%' }}
+                          className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300"
+                          style={{ width: `${progress}%` }}
                         ></div>
                       </div>
                     </div>
@@ -588,7 +751,7 @@ export default function LiveTV() {
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-white">
               <Icon name="Calendar" className="text-purple-400" />
-              Телепрограмма на сегодня
+              Телепрограмма на сегодня (00:00 - 23:59)
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -607,7 +770,7 @@ export default function LiveTV() {
                     <div className="flex items-center gap-4">
                       <div className="text-4xl">{program.thumbnail}</div>
                       <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
+                        <div className="flex items-center gap-2 mb-1 flex-wrap">
                           <span className="text-purple-300 font-bold">
                             {program.startTime}
                           </span>
