@@ -481,6 +481,19 @@ export default function LiveTV() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
       <div className="container mx-auto max-w-7xl">
+        <div className="flex justify-end mb-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-white hover:bg-white/20"
+            asChild
+          >
+            <a href="/">
+              <Icon name="X" size={24} className="mr-2" />
+              Закрыть эфир
+            </a>
+          </Button>
+        </div>
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-purple-600 text-white px-8 py-3 rounded-full mb-4 animate-pulse">
             <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
