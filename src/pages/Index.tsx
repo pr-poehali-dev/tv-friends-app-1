@@ -138,14 +138,26 @@ const Index = () => {
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
                 Новые Друзья ТВ — это качественный контент, интересные программы и круглосуточный эфир для всех возрастов
               </p>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                onClick={() => scrollToSection('live')}
-              >
-                <Icon name="Play" size={20} className="mr-2" />
-                Смотреть прямой эфир
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  asChild
+                >
+                  <a href="/live-tv">
+                    <Icon name="Play" size={20} className="mr-2" />
+                    Смотреть прямой эфир
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() => scrollToSection('schedule')}
+                >
+                  <Icon name="Calendar" size={20} className="mr-2" />
+                  Телепрограмма
+                </Button>
+              </div>
             </div>
           </div>
         </section>
