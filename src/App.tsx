@@ -15,6 +15,7 @@ import UtroNovieDruzia from "./pages/UtroNovieDruzia";
 import UtroEpisodes from "./pages/UtroEpisodes";
 import EtoNadoVidet from "./pages/EtoNadoVidet";
 import LiveTV from "./pages/LiveTV";
+import Awards2026 from "./pages/Awards2026";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/utro-episodes" element={<UtroEpisodes />} />
           <Route path="/eto-nado-videt" element={<EtoNadoVidet />} />
           <Route path="/live-tv" element={<LiveTV />} />
+          <Route path="/awards-2026" element={<Awards2026 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
