@@ -230,6 +230,51 @@ export default function EtoNadoVidet() {
                   </Card>
                 )}
 
+                {currentVideo === 5 && (
+                  <Card className="mb-6 bg-gradient-to-r from-green-100 via-lime-100 to-emerald-100 dark:from-green-900/40 dark:to-emerald-900/40 border-4 border-green-500">
+                    <CardContent className="p-8">
+                      <div className="text-center space-y-4">
+                        <div className="text-7xl mb-3">🥗🍎🥑</div>
+                        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-xl inline-block">
+                          <p className="text-sm font-bold">РЕКЛАМНАЯ ПАУЗА</p>
+                        </div>
+                        <h2 className="text-5xl font-black text-green-700 leading-tight">
+                          КУХНЯ ЗДОРОВЬЯ
+                        </h2>
+                        <div className="bg-white/70 dark:bg-gray-800/70 p-6 rounded-xl">
+                          <p className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+                            В новом выпуске Вас ожидают:
+                          </p>
+                          <div className="grid md:grid-cols-3 gap-4 mb-4">
+                            <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-lg">
+                              <div className="text-4xl mb-2">🍽️</div>
+                              <p className="font-bold text-lg">Новые блюда</p>
+                            </div>
+                            <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-lg">
+                              <div className="text-4xl mb-2">📖</div>
+                              <p className="font-bold text-lg">Интересные факты</p>
+                            </div>
+                            <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-lg">
+                              <div className="text-4xl mb-2">👨‍🍳</div>
+                              <p className="font-bold text-lg">Рецепты</p>
+                            </div>
+                          </div>
+                          <p className="text-xl text-gray-700 dark:text-gray-300 mb-4">
+                            И ещё многое другое!
+                          </p>
+                        </div>
+                        <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-xl inline-block">
+                          <p className="text-3xl font-black mb-1">СУББОТА • 11:00</p>
+                          <p className="text-xl font-semibold">Новые друзья ТВ</p>
+                        </div>
+                        <p className="text-sm text-green-700 dark:text-green-400 font-bold">
+                          🌟 Смотрите "Кухню здоровья" каждую субботу! 🌟
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+
                 <div className="flex gap-3 justify-center flex-wrap mb-6">
                   <Button
                     onClick={() => setCurrentVideo(Math.max(0, currentVideo - 1))}
